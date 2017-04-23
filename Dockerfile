@@ -32,7 +32,7 @@ COPY entrypoint.sh /
 
 RUN chmod +x /entrypoint.sh
 
-VOLUME [ "/data", "/jirafeau/lib/config.local.php" ]
+VOLUME [ "/data" ]
 
 EXPOSE 80
 LABEL description "Jirafeau is a web site permitting to upload a file in a simple way and give an unique link to it."
