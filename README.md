@@ -10,7 +10,7 @@ A tiny image running [alpine](https://github.com/gliderlabs/docker-alpine) Linux
 		--hostname=jirafeau \
 		--name=jirafeau \
 		-v /<host_data_directory>:/data \
-		-v /<host_cfg_file>:/jirafeau/lib/config.local.php \
+		-v /<host_cfg_direcrory:/cfg \
 		jgeusebroek/jirafeau
 
 ## Optional environment variables
