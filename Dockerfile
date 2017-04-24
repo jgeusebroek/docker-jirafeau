@@ -7,6 +7,7 @@ RUN apk -U add \
     bash \
     curl \
     nginx \
+    php7 \
     php7-fpm \
     php7-gd \
     php7-mcrypt \
