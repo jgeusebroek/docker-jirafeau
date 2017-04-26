@@ -23,6 +23,9 @@ RUN apk -U add \
  && tar xvzf jirafeau.tar.gz --strip 1 \
  && rm jirafeau.tar.gz \
 
+ # Make sure search engines do not index the site, to prevent abuse.
+ && sed -i '/<\/head>/i<meta name="robots" content="noindex, follow" />' /jirafeau/lib/template/header.php \
+
  && apk del tar ca-certificates curl libcurl \
  && rm -f /var/cache/apk/*
 
