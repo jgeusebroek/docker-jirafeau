@@ -13,6 +13,7 @@ RUN apk -U add \
     php7-mcrypt \
     php7-json \
     php7-zlib \
+    php7-session \
     supervisor \
     tini \
     ca-certificates \
