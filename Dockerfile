@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Jeroen Geusebroek <me@jeroengeusebroek.nl>
+LABEL maintainer="Jeroen Geusebroek <me@jeroengeusebroek.nl>"
 
 ENV GID=4000 UID=4000
 
@@ -18,15 +18,12 @@ RUN apk -U add \
     tini \
     ca-certificates \
     tar \
-
  && mkdir jirafeau && cd jirafeau \
  && curl -L -o jirafeau.tar.gz https://gitlab.com/mojo42/Jirafeau/repository/archive.tar.gz \
  && tar xvzf jirafeau.tar.gz --strip 1 \
  && rm jirafeau.tar.gz \
-
  # Make sure search engines do not index the site, to prevent abuse.
  && sed -i '/<\/head>/i<meta name="robots" content="noindex, nofollow" />' /jirafeau/lib/template/header.php \
-
  && apk del tar ca-certificates curl libcurl \
  && rm -f /var/cache/apk/*
 
