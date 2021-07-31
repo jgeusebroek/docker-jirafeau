@@ -19,7 +19,7 @@ RUN apk -U add \
     ca-certificates \
     tar \
  && mkdir jirafeau && cd jirafeau \
- && curl -L -o jirafeau.tar.gz https://gitlab.com/mojo42/Jirafeau/repository/archive.tar.gz \
+ && curl -L -o jirafeau.tar.gz https://gitlab.com/mojo42/Jirafeau/-/archive/master/Jirafeau-master.tar.gz \
  && tar xvzf jirafeau.tar.gz --strip 1 \
  && rm jirafeau.tar.gz \
  # Make sure search engines do not index the site, to prevent abuse.
