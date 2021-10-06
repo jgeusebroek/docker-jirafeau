@@ -27,8 +27,8 @@ RUN apk -U add \
  && apk del tar ca-certificates curl libcurl \
  && rm -f /var/cache/apk/*
 
-COPY files/nginx.conf /etc/nginx/nginx.conf
-COPY files/php-fpm.conf /etc/php7/php-fpm.conf
+COPY files/nginx.conf /etc/nginx/nginx.original.conf
+COPY files/php-fpm.conf /etc/php7/php-fpm.original.conf
 COPY files/supervisord.conf /usr/local/etc/supervisord.conf
 COPY entrypoint.sh /
 
