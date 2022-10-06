@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.15
 LABEL maintainer="Jeroen Geusebroek <me@jeroengeusebroek.nl>"
 
 ENV GID=4000 UID=4000
